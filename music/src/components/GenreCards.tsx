@@ -6,7 +6,7 @@ interface GenreCardProps {
 
 const GenreCard: React.FC<GenreCardProps> = ({ name }) => {
   return (
-    <div className="bg-white shadow-md rounded p-4 mb-4">
+    <div className="bg-purple-400 shadow-md rounded p-4 mb-4">
       <div className="text-xl font-bold">{name}</div>
     </div>
   );
