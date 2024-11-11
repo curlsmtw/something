@@ -1,17 +1,23 @@
 import React from "react";
 
+interface GenreCardProps {
+  name: string;
+}
+
+const GenreCard: React.FC<GenreCardProps> = ({ name }) => {
+  return (
+    <div className="bg-white shadow-md rounded p-4 mb-4">
+      <div className="text-xl font-bold">{name}</div>
+    </div>
+  );
+};
+
 const GenreCards = () => {
   return (
     <div className="p-4">
-      <div className="bg-white shadow-md rounded p-4 mb-4">
-        <div className="text-xl font-bold">RnB</div>
-      </div>
-      <div className="bg-white shadow-md rounded p-4 mb-4">
-        <div className="text-xl font-bold">Rock</div>
-      </div>
-      <div className="bg-white shadow-md rounded p-4 mb-4">
-        <div className="text-xl font-bold">Indie</div>
-      </div>
+      <GenreCard name="RnB" />
+      <GenreCard name="Indie" />
+      <GenreCard name="Rock" />
     </div>
   );
 };
